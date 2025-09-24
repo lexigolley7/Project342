@@ -11,7 +11,7 @@ public class GLProject {
 		System.out.println("Welcome to project lexi & daisy");
 		System.out.println("testingfnjhdfj");
 		System.out.println("can you see this");
-		System.out.println("can you see this this 2");
+		System.out.println("can you see this 2");
 		
 		
 		
