@@ -1,4 +1,5 @@
-import GenericList.Node;
+import java.util.Iterator;
+
 
 public class GenericQueue<T> extends GenericList<T> {
 	Node <T> tail;
@@ -9,7 +10,7 @@ public class GenericQueue<T> extends GenericList<T> {
 		setHead(firstNode);
 		tail = firstNode;
 	}
-	//.
+	//
 	public void add(T data) {
 		Node<T> newNode = new Node<>(data);
 		
@@ -47,11 +48,12 @@ public class GenericQueue<T> extends GenericList<T> {
 	    curr.next = null;
 	    tail = curr;
 	    setLength(getLength() - 1);
-	    return data;
+	    return data;}
 	}
-		
+	//hello
 	public void add(T data, int code) {
-		Node<T> newNode = new Node<>(data);
+		Node<T> newNode = new Node<>(data);	
+		newNode.code = code;
 		
 		if (getHead() == null) { 
 	        setHead(newNode);
@@ -62,17 +64,18 @@ public class GenericQueue<T> extends GenericList<T> {
 	        tail = newNode;      
 	    }
 		setLength(getLength() + 1);
-		newNode.code = data;
 	}
 	
 	public void enqueue(T data) {
+		add(data);
 		
 	}
 	public T dequeue() {
-		
+		return delete();
 	}
-	}
-
-
+	
+	public Iterator<T> iterator() {
+        return new GLLIterator<>(getHead());
+    }
 	
 }
