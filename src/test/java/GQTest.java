@@ -1,17 +1,20 @@
 import static org.junit.jupiter.api.Assertions.*;
-//import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.Test;
 
 
 
 public class GQTest {
+	@Test
 	void addTest() {
 		
 	}
 	
+	@Test
 	void addCodeTest() {
 		
 	}
 	
+	@Test
 	void deleteTest() {
 		GenericQueue<Integer> myList = new GenericQueue<>(1);
         myList.enqueue(3);
@@ -21,15 +24,17 @@ public class GQTest {
 		//null option?
 	}
 	
-	void enqueueTest() {
-		GenericQueue<Integer> myList = new GenericQueue<>(1);
-		myList.enqueue(1);
-        myList.enqueue(2);
-//        
-//		assertEquals(2, getHead(), ".");
-//		assertEquals(1, myList.delete(), ".");
-	}
+//	@Test
+//	void enqueueTest() {
+//		GenericQueue<Integer> myList = new GenericQueue<>(1);
+//		myList.enqueue(1);
+//        myList.enqueue(2);
+////        
+////		assertEquals(2, getHead(), ".");
+////		assertEquals(1, myList.delete(), ".");
+//	}
 	
+	@Test
 	void dequeueTest() {
 		GenericQueue<Integer> myList = new GenericQueue<>(1);
 		myList.enqueue(2);
