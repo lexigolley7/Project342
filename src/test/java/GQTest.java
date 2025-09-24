@@ -13,7 +13,7 @@ public class GQTest {
 	void addCodeTest() {
 		
 	}
-	//testing my comment 
+	//testing my 
 	
 	@Test
 	void deleteTest() {
