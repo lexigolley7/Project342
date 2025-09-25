@@ -1,6 +1,6 @@
 import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
-
+import java.util.Iterator;
 
 
 public class GQTest {
@@ -126,4 +126,39 @@ public class GQTest {
 		
 		assertEquals(expected.length,index, "This should equal 4");
 	}
+	
+	@Test
+	void testDescendingIterator() {
+		GenericQueue<Integer> queue = new GenericQueue<>(1);
+		queue.enqueue(2);
+		queue.enqueue(3);
+		queue.enqueue(7);
+		
+		int[] expected = {1,2,3,7};
+		
+		int index = expected.length-1;
+		
+		
+		Iterator<Integer> descend = queue.descendingIterator();
+		
+		while(descend.hasNext()) {
+			int val = descend.next();
+			assertEquals(expected[index],val);
+			index--;
+		}
+		assertEquals(-1,index, "-1 all elements have been matched");
+		
+	}
+	
+	@Test
+	void testingNode(){
+		GenericList.Node<Integer> node = new GenericList.Node<>(7);
+		
+		assertEquals(42,node.data, "node should equal 42");
+		
+		assertEquals(null, node.next, "the next node should equal null");
+		
+		assertEquals(0, node.code, "the code is 0 by default");
+	}
+	
 }
