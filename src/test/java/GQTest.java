@@ -34,18 +34,18 @@ public class GQTest {
 		//null option?
 	}
 	
-//	@Test
-//	void enqueueTest() {
-//		GenericQueue<Integer> myList = new GenericQueue<>(1);
-//		myList.enqueue(3);
-//        myList.enqueue(4);
-////        
-//        assertEquals(3, myList.getLength(), "head should equal 1");
-//		assertEquals(1, myList.getHead(), "head should equal 1");
-//		assertEquals(4, myList.delete(), "delete should return and remove 4");
-//		assertEquals(1, myList.getHead(), "head should still equal 1");
-//		assertEquals(2, myList.getLength(), "head should equal 1");
-//	}
+	@Test
+	void enqueueTest() {
+		GenericQueue<Integer> myList = new GenericQueue<>(1);
+		myList.enqueue(3);
+        myList.enqueue(4);
+        
+        assertEquals(3, myList.getLength(), "head should equal 1");
+		assertEquals(1, myList.getHead(), "head should equal 1");
+		assertEquals(4, myList.delete(), "delete should return and remove 4");
+		assertEquals(1, myList.getHead(), "head should still equal 1");
+		assertEquals(2, myList.getLength(), "head should equal 1");
+	}
 	
 	@Test
 	void dequeueTest() {

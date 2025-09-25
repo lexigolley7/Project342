@@ -15,7 +15,6 @@ public class GLLIterator <T> implements Iterator <T> {
 	public T next() {
 		T data = curr.data;
 		curr = curr.next;
-		
 		return data;
 	}
 	
