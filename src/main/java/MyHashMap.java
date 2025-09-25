@@ -69,6 +69,16 @@ public class MyHashMap<T>{
 		
 		GenericQueue<T> bucket = map.get(index);
 		
+		GenericList.Node<T> curr = bucket.getHead();
+		
+		while(curr != null) {
+			if(curr.code == hash) {
+				return curr.data;
+			}
+			curr = curr.next;
+		}
+		
+		return null;
 		
 		
 	}
