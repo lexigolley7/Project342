@@ -43,12 +43,6 @@ public class GQTest {
 		
 		assertEquals(3, queue.tail.data, "tail should equal 3");
 		assertEquals(20, queue.tail.code, "code should equal 20");
-		
-		
-		
-		
-		
-		
 	}
 	
 	
