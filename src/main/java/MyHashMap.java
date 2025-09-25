@@ -25,7 +25,10 @@ public class MyHashMap<T> implements Iterable <T>{
 		GenericQueue<T> bucket = map.get(index);
 		
 		
-		bucket.enqueue((T)(Object)hash);
+		if(bucket == null) {
+			bucket = new GenericQueue<>(value,hash);
+			
+		}
 		
 		
 	}
