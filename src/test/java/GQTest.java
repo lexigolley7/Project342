@@ -15,11 +15,39 @@ public class GQTest {
 	
 	@Test
 	void addTest() {
+		GenericQueue<Integer> queue = new GenericQueue<>(1);
+		
+		queue.add(2);
+		queue.add(3);
+		
+		assertEquals(3, queue.getLength(), "size should equal 3");
+		assertEquals(1, queue.getHead().data, "head should equal 1");
+		assertEquals(3, queue.tail.data, "tail should equal 3");
 		
 	}
 	
 	@Test
 	void addCodeTest() {
+		GenericQueue<Integer> queue = new GenericQueue<>(1);
+		
+		queue.add(2,10);
+		queue.add(3,20);
+		
+		assertEquals(3, queue.getLength(), "size should equal 3");
+		
+		assertEquals(1, queue.getHead().data, "head should equal 1");
+		assertEquals(0, queue.getHead().code, "code should equal 0");
+		
+		assertEquals(2, queue.getHead().next.data, "next node should equal 2");
+		assertEquals(10, queue.getHead().next.code, "code should equal 10");
+		
+		assertEquals(3, queue.tail.data, "tail should equal 3");
+		assertEquals(20, queue.tail.code, "code should equal 20");
+		
+		
+		
+		
+		
 		
 	}
 	
@@ -37,14 +65,18 @@ public class GQTest {
 	@Test
 	void enqueueTest() {
 		GenericQueue<Integer> myList = new GenericQueue<>(1);
+		
+		assertEquals(1, myList.getLength(), "size should equal 1");
+		assertEquals(1, myList.getHead().data, "head should still equal 1");
+		
 		myList.enqueue(3);
         myList.enqueue(4);
         
-        assertEquals(3, myList.getLength(), "head should equal 1");
-		assertEquals(1, myList.getHead(), "head should equal 1");
+        assertEquals(3, myList.getLength(), "length should equal 3");
+		assertEquals(1, myList.getHead().data, "head should equal 1");
 		assertEquals(4, myList.delete(), "delete should return and remove 4");
-		assertEquals(1, myList.getHead(), "head should still equal 1");
-		assertEquals(2, myList.getLength(), "head should equal 1");
+		assertEquals(1, myList.getHead().data, "head should still equal 1");
+		assertEquals(2, myList.getLength(), "length should equal 2");
 	}
 	
 	@Test

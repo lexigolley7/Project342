@@ -9,6 +9,7 @@ public class GenericQueue<T> extends GenericList<T> {
 		Node<T> firstNode = new Node<>(first);
 		setHead(firstNode);
 		tail = firstNode;
+		setLength(1);
 	}
 	//
 	public void add(T data) {
