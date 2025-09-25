@@ -2,7 +2,7 @@ import java.util.ArrayList;
 import java.util.Iterator;
 
 
-public class MyHashMap<T> implements Iterable <T>{
+public class MyHashMap<T>{
 	
 	private ArrayList<GenericQueue<T>> map;
 	
@@ -26,12 +26,16 @@ public class MyHashMap<T> implements Iterable <T>{
 		
 		
 		if(bucket == null) {
-			bucket = new GenericQueue<>(value,hash);
+			bucket = new GenericQueue<>(value);
 			
+			bucket.getHead().code = hash;
+			
+			map.set(index, bucket);
+		}else {
+			bucket.add(value,hash);
 		}
 		
-		
-		
+	
 	}
 	
 	public boolean contains(String key) {
