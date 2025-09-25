@@ -96,8 +96,15 @@ public class GQTest {
 	@Test
 	void forLoopTest() {
 		GenericQueue<Integer> queue = new GenericQueue<>(1);
+		queue.add(3);
+		queue.add(4);
 		
+		int count = 0;
+		for(Integer item : queue) {
+			count++;
+		}
 		
+		assertEquals(3, count, "count should equal 3");
 		
 	}
 }
