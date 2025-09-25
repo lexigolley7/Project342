@@ -10,6 +10,8 @@ public class GQTest {
 		assertNotNull(queue.getHead(), "head should not be null");
 		assertEquals(1,queue.getHead().data, "head should be 1");
 		assertEquals(queue.getHead(),queue.tail, "tail should be the same as head");
+		
+
 	}
 	
 	
@@ -43,6 +45,12 @@ public class GQTest {
 		
 		assertEquals(3, queue.tail.data, "tail should equal 3");
 		assertEquals(20, queue.tail.code, "code should equal 20");
+		
+		
+		
+		
+		
+		
 	}
 	
 	
@@ -83,5 +91,13 @@ public class GQTest {
 		assertEquals(2, myList.dequeue(), "Wrong value. Last node value should be 2.");
 		assertEquals(1, myList.dequeue(), "Wrong value. Last node value should be 1.");
 		// null option
+	}
+	
+	@Test
+	void forLoopTest() {
+		GenericQueue<Integer> queue = new GenericQueue<>(1);
+		
+		
+		
 	}
 }
