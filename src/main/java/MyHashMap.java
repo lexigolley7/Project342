@@ -5,6 +5,7 @@ import java.util.Iterator;
 public class MyHashMap<T>{
 	
 	private ArrayList<GenericQueue<T>> map;
+	private int size;
 	
 	public MyHashMap(String key, T value) {
 		
@@ -44,12 +45,18 @@ public class MyHashMap<T>{
 		
 		GenericQueue<T> bucket = map.get(index);
 		
-		for(T value : bucket) {
-			if(value.equals((T)(Object)hash)) {
+		if(bucket == null) {
+			return false;
+		}
+		
+		GenericList.Node<T> curr = bucket.getHead();
+		
+		while(curr != null) {
+			if(curr.code == hash) {
 				return true;
 			}
-				
-			}
+			curr = curr.next;
+		}
 		return false;
 	}
 		
@@ -62,22 +69,20 @@ public class MyHashMap<T>{
 		
 		GenericQueue<T> bucket = map.get(index);
 		
-		for(T key2 : bucket) {
-			if(key2.equals((T)(Object)map.get(index))) {
-				return key.value;
-			}else {
-				return null;
-			}
-		}
+		
 		
 	}
 	
 	public int size() {
-		
+		return size;
 	}
 	
 	public boolean isEmpty() {
+		if (size == 0) {
+			return true;
+		}
 		
+		return false;
 	}
 	
 	public T replace(String key, T value) {
