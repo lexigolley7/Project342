@@ -77,10 +77,7 @@ public class MyHashMap<T>{
 			}
 			curr = curr.next;
 		}
-		
 		return null;
-		
-		
 	}
 	
 	public int size() {
@@ -96,7 +93,22 @@ public class MyHashMap<T>{
 	}
 	
 	public T replace(String key, T value) {
+		int hash = key.hashCode();
+		int index = key.hashCode() & 9;
 		
+		GenericQueue<T> bucket = map.get(index);
+		
+		GenericList.Node<T> curr = bucket.getHead();
+		
+		while(curr != null) {
+			if(curr.code == hash) {
+				T old = curr.data;
+				curr.data = value;
+				return old;
+			}
+			curr = curr.next;
+		}
+		return null;
 	}
 	
 	
