@@ -39,6 +39,7 @@ public class HMTest {
 		MyHashMap<Integer> map = new MyHashMap<>("key1", 100);
 		assertEquals(100,map.get("key1"), "The value at key1 should be 100");
 		assertNull(map.get("fake"), "the key fake should be null");
+		
 	}
 	
 	@Test

@@ -154,7 +154,7 @@ public class GQTest {
 	void testingNode(){
 		GenericList.Node<Integer> node = new GenericList.Node<>(7);
 		
-		assertEquals(42,node.data, "node should equal 42");
+		assertEquals(7,node.data, "node should equal 7");
 		
 		assertEquals(null, node.next, "the next node should equal null");
 		

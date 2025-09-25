@@ -1,42 +1,34 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
-
 public class MyHashMap<T>{
 	
 	private ArrayList<GenericQueue<T>> map;
 	private int size;
 	
 	public MyHashMap(String key, T value) {
-		
 		map = new ArrayList<>(10);
-		
 		for(int i = 0; i < 10; i++) {
 			map.add(null);
 		}
-		
 		put(key,value);
 	}
 	
 	public void put(String key, T value) {
-		
 		int hash = key.hashCode();
 		int index = key.hashCode() & 9;
 		
 		GenericQueue<T> bucket = map.get(index);
 		
-		
 		if(bucket == null) {
 			bucket = new GenericQueue<>(value);
-			
 			bucket.getHead().code = hash;
-			
 			map.set(index, bucket);
+			size++;
 		}else {
 			bucket.add(value,hash);
+			size++;
 		}
-		
-	
 	}
 	
 	public boolean contains(String key) {
@@ -68,6 +60,9 @@ public class MyHashMap<T>{
 		int index = key.hashCode() & 9;
 		
 		GenericQueue<T> bucket = map.get(index);
+		if (bucket == null) {   
+	        return null;
+	    }
 		
 		GenericList.Node<T> curr = bucket.getHead();
 		
