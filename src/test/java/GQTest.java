@@ -107,4 +107,23 @@ public class GQTest {
 		assertEquals(3, count, "count should equal 3");
 		
 	}
+	
+	@Test
+	void testIterator() {
+		GenericQueue<Integer> queue = new GenericQueue<>(1);
+		queue.enqueue(2);
+		queue.enqueue(3);
+		queue.enqueue(7);
+		
+		int[] expected = {1,2,3,7};
+		
+		int index = 0;
+		
+		for(int val : queue) {
+			assertEquals(expected[index],val);
+			index++;
+		}
+		
+		assertEquals(expected.length,index, "This should equal 4");
+	}
 }

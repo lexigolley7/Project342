@@ -111,9 +111,11 @@ public abstract class GenericList<T> implements Iterable <T> {
 	public void setHead(Node<T> head){
 		this.head = head;
 	}
-	public Iterator<T> Iterator(){
+	
+	public Iterator<T> iterator(){
 		return new GLLIterator <> (getHead());
 	}
+	
 	public Iterator<T> descendingIterator(){
 		return new ReverseGLLIterator <> (getHead());
 	}
