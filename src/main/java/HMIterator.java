@@ -1,12 +1,13 @@
+import java.util.Iterator;
 
-public class HMIterator implements Iterable <T> {
-
-	 public boolean hasNext() {
-
-	 }
-	 
-	 public V next() {
-		 
-	 }
-	
-}
+//public class HMIterator implements Iterable <T> {
+//
+//	 public boolean hasNext() {
+//
+//	 }
+//	 
+//	 public V next() {
+//		 
+//	 }
+//	
+//}

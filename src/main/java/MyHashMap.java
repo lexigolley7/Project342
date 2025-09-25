@@ -111,9 +111,9 @@ public class MyHashMap<T>{
 		return null;
 	}
 	
-	public Iterator<V> iterator() {
-	    return new HMIterator();
-	}
+//	public Iterator<V> iterator() {
+//	    return new HMIterator();
+//	}
 
 	
 	
