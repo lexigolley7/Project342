@@ -2,7 +2,6 @@ import static org.junit.jupiter.api.Assertions.*;
 import org.junit.jupiter.api.Test;
 import java.util.Iterator;
 
-
 public class GQTest {
 	
 	@Test
@@ -117,7 +116,6 @@ public class GQTest {
 
         //checks that dequeue returns 1
 		assertEquals(1, myList.dequeue(), "Wrong value. Last node value should be 1.");
-		
 	}
 	
 	@Test
@@ -207,5 +205,4 @@ public class GQTest {
 		//checks that the code associated is 0 by default
 		assertEquals(0, node.code, "the code is 0 by default");
 	}
-	
 }
