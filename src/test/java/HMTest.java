@@ -75,26 +75,39 @@ public class HMTest {
 	}
 	
 	@Test
-	void iteratorTest() {
-		// test
+	void forLoopTest() {
 		MyHashMap<Integer> map = new MyHashMap<>("key1", 100);
         map.put("key2", 200);
-		GenericQueue<Integer> queue = new GenericQueue<>(1);
-//		queue.enqueue(2);
-//		queue.enqueue(3);
-//		queue.enqueue(7);
-//		
-//		int[] expected = {1,2,3,7};
-//		
-//		int index = 0;
-//		
-//		for(int val : queue) {
-//			assertEquals(expected[index],val);
-//			index++;
-//		}
-//		
-//		assertEquals(expected.length,index, "This should equal 4");
+        map.put("key3", 300);
+        
+        int count = 0;
+        for(Integer bucket : map) {
+        	count++;
+        }
+		assertEquals(3, count, "Map has 3 buckets");
 	}
 	
+	@Test
+	void iteratorTest() {
+		MyHashMap<Integer> map = new MyHashMap<>("key1", 100);
+        map.put("key2", 200);
+        map.put("key3", 300);
+        
+        int sum = 0;
+        for (int val : map) {
+            sum += val;
+        }
+        assertEquals(600, sum, "Iterator should traverse all values");
+	}
 	
+	@Test
+	void testingNode(){
+		GenericQueue.Node<Integer> node = new GenericQueue.Node<>(1);
+	    assertEquals(1, node.data, "Node's value should be 1");
+	    assertEquals(null, node.next, "The next node should equal null");
+		assertEquals(0, node.code, "The code is 0 by default");
+		
+	    node.data = 2;
+	    assertEquals(2, node.data, "Node's value should be 2");
+	}
 }

@@ -103,9 +103,7 @@ public class GQTest {
 		for(Integer item : queue) {
 			count++;
 		}
-		
 		assertEquals(3, count, "count should equal 3");
-		
 	}
 	
 	@Test
@@ -116,15 +114,13 @@ public class GQTest {
 		queue.enqueue(7);
 		
 		int[] expected = {1,2,3,7};
-		
 		int index = 0;
 		
 		for(int val : queue) {
 			assertEquals(expected[index],val);
 			index++;
 		}
-		
-		assertEquals(expected.length,index, "This should equal 4");
+		assertEquals(expected.length,index, "Index should equal 4");
 	}
 	
 	@Test
@@ -135,9 +131,7 @@ public class GQTest {
 		queue.enqueue(7);
 		
 		int[] expected = {1,2,3,7};
-		
 		int index = expected.length-1;
-		
 		
 		Iterator<Integer> descend = queue.descendingIterator();
 		
@@ -147,7 +141,6 @@ public class GQTest {
 			index--;
 		}
 		assertEquals(-1,index, "-1 all elements have been matched");
-		
 	}
 	
 	@Test
@@ -155,7 +148,7 @@ public class GQTest {
 		GenericList.Node<Integer> node = new GenericList.Node<>(7);
 		
 		assertEquals(7,node.data, "node should equal 7");
-		
+
 		assertEquals(null, node.next, "the next node should equal null");
 		
 		assertEquals(0, node.code, "the code is 0 by default");

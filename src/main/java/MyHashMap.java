@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 import java.util.Iterator;
 
-public class MyHashMap<T>{
+public class MyHashMap<T> implements Iterable<T>{
 	
 	private ArrayList<GenericQueue<T>> map;
 	private int size;
