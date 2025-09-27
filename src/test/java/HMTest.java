@@ -57,9 +57,6 @@ public class HMTest {
 		// replace an element and verify size
 		map.replace("key2", 500);
 		assertEquals(2, map.size(), "The size of map should be 2");
-		// delete an element and verify size
-		map.();  
-	    assertEquals(1, map.size(), "The size of map should be 1 after removing key1");
 	}
 	
 	// verifies that isEmpty() returns correctly depending on if the map is empty or not

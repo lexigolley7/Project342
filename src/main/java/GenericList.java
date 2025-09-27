@@ -1,10 +1,7 @@
-
 import java.util.ArrayList;
 import java.util.Iterator;
 
-/* stores elements in a linked structure. Adds, deletes, and iterated over elements
- * */
-
+// stores elements in a linked structure. Adds, deletes, and iterated over elements
 public abstract class GenericList<T> implements Iterable <T> {
 	
 	public static class Node<T>{
@@ -23,7 +20,6 @@ public abstract class GenericList<T> implements Iterable <T> {
 			this.code = 0;
 			//initialize next pointer to null
 			this.next = null;
-		
 		}
 	}
 	
@@ -33,7 +29,6 @@ public abstract class GenericList<T> implements Iterable <T> {
 	private int length;
 	
 	public void print() {
-		
 		//if the head is null the list is empty
 		if(head == null) {
 			System.out.println("Empty List");
@@ -53,7 +48,6 @@ public abstract class GenericList<T> implements Iterable <T> {
 	
 	public abstract void add (T data);
 	public abstract T delete(); 
-	
 	
 	public ArrayList<T> dumpList(){
 		//create new array list to hold data from linked list
@@ -95,11 +89,9 @@ public abstract class GenericList<T> implements Iterable <T> {
 		}
 		//return null if else
 		return null;
-		
 	}
 	
 	public T set(int index, T element) {
-		
 		//initialize counter to track current position
 		if(index < 0 || index >= length) {
 			return null;
@@ -124,12 +116,10 @@ public abstract class GenericList<T> implements Iterable <T> {
 			//go to the next node
 			curr = curr.next;
 			//add to counter
-			i++;
-				
+			i++;	
 		}
 		//return null if else
 		return null;
-		
 	}
 	
 	//returns number of elements in the list
@@ -156,6 +146,4 @@ public abstract class GenericList<T> implements Iterable <T> {
 	public Iterator<T> descendingIterator(){
 		return new ReverseGLLIterator <> (getHead());
 	}
-	
-
 }

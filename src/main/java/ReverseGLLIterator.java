@@ -16,8 +16,7 @@ public class ReverseGLLIterator <T> implements Iterator <T> {
 			//pushed current nodes data onto the stack
 			stack.push(curr.data);
 			//goes to next node
-			curr = curr.next;
-				
+			curr = curr.next;	
 		}
 	}
 	

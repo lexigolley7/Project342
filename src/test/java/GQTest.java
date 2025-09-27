@@ -14,9 +14,7 @@ public class GQTest {
 		assertEquals(1,queue.getHead().data, "head should be 1");
 		//makes sure the head and tail are the same
 		assertEquals(queue.getHead(),queue.tail, "tail should be the same as head");
-		
 	}
-	
 	
 	@Test
 	void addTest() {
@@ -31,7 +29,6 @@ public class GQTest {
 		assertEquals(1, queue.getHead().data, "head should equal 1");
 		//checks that the tail node is equal to 3
 		assertEquals(3, queue.tail.data, "tail should equal 3");
-		
 	}
 	
 	@Test
@@ -54,13 +51,10 @@ public class GQTest {
 		//checks that the tail node is 3 and it's code is 20
 		assertEquals(3, queue.tail.data, "tail should equal 3");
 		assertEquals(20, queue.tail.code, "code should equal 20");
-
 	}
-	
 	
 	@Test
 	void deleteTest() {
-		
 		//creates a new generic mylist for integers with one integer "1"	
 		GenericQueue<Integer> myList = new GenericQueue<>(1);
         //enqueues 3 to the list
@@ -70,12 +64,10 @@ public class GQTest {
 		assertEquals(3, myList.delete(), "Wrong value. Last node value should be 3.");
 		//checks that once the delete function is called it returns 1
 		assertEquals(1, myList.delete(), "Wrong value. Last node value should be 1.");
-		
 	}
 	
 	@Test
 	void enqueueTest() {
-		
 		//creates a new generic mylist for integers with one integer "1"
 		GenericQueue<Integer> myList = new GenericQueue<>(1);
 		
@@ -120,7 +112,6 @@ public class GQTest {
 	
 	@Test
 	void forLoopTest() {
-		
 		//creates a new generic mylist for integers with one integer "1"
 		GenericQueue<Integer> queue = new GenericQueue<>(1);
 		//adds 3 and 4 into queue
@@ -165,7 +156,6 @@ public class GQTest {
 	
 	@Test
 	void testDescendingIterator() {
-		
 		//creates a new generic mylist for integers with one integer "1"
 		GenericQueue<Integer> queue = new GenericQueue<>(1);
 		//enqueues 2,3,7
@@ -194,7 +184,6 @@ public class GQTest {
 	
 	@Test
 	void testingNode(){
-		
 		//creates a new generic list node for integers with one integer "7"
 		GenericList.Node<Integer> node = new GenericList.Node<>(7);
 		

@@ -100,7 +100,7 @@ public class MyHashMap<T> implements Iterable<T>{
 		// iterate through the queue until given key is found
 		while(curr != null) {
 			if(curr.code == hash) {
-				// save old value into a variable to return and replace with new value after				T old = curr.data;
+				// save old value into a variable to return and replace with new value after	
 				T old = curr.data;
 				curr.data = value;
 				return old;

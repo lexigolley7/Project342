@@ -21,5 +21,4 @@ public class GLLIterator <T> implements Iterator <T> {
 		//returns saved data
 		return data;
 	}
-	
 }
